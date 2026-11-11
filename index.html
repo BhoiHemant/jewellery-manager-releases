@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jewellery Manager Download</title>
+<meta name="description" content="Jewellery Manager — jewellery dukaan ke liye GST billing aur stock software. Windows 10/11 ke liye download karein.">
+<style>
+  :root {
+    --bg: #faf8f4; --card: #ffffff; --text: #1f1d1a; --muted: #6b665e; --line: #e8e2d6;
+    --gold: #a8741a; --gold-dark: #8a5e12; --gold-soft: #f6ecd9; --warn-bg: #fff6e0; --warn-line: #f0d48a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151412; --card: #1e1c19; --text: #f1ede6; --muted: #a59f95; --line: #34302a;
+      --gold: #d9a443; --gold-dark: #e8b85c; --gold-soft: #2c2416; --warn-bg: #2a2313; --warn-line: #5c4a1d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151412; --card: #1e1c19; --text: #f1ede6; --muted: #a59f95; --line: #34302a;
+    --gold: #d9a443; --gold-dark: #e8b85c; --gold-soft: #2c2416; --warn-bg: #2a2313; --warn-line: #5c4a1d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", "Noto Sans", "Noto Sans Devanagari", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { text-align: center; margin-bottom: 28px; }
+  .logo { width: 56px; height: 56px; border-radius: 14px; background: var(--gold-soft); display: inline-grid; place-items: center; margin-bottom: 12px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; }
+  .tag { color: var(--muted); margin: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin-bottom: 18px; }
+  .download { text-align: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #fff; text-decoration: none;
+    font-weight: 600; font-size: 19px; padding: 14px 30px; border-radius: 10px; min-height: 52px;
+  }
+  .btn:hover { background: var(--gold-dark); }
+  .btn:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
+  .meta { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
+  .meta strong { color: var(--text); }
+  h2 { font-size: 20px; margin: 0 0 12px; }
+  ol { margin: 0; padding-left: 22px; }
+  ol li { margin: 8px 0; }
+  .req { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; padding: 0; list-style: none; }
+  .req li::before { content: "✓ "; color: var(--gold); font-weight: 700; }
+  .warn { background: var(--warn-bg); border-color: var(--warn-line); }
+  .steps-mini { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 4px; }
+  .pill { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 4px 12px; font-weight: 600; font-size: 15px; }
+  .arrow { color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 28px; }
+  footer a { color: var(--gold); }
+  code { background: var(--gold-soft); padding: 1px 6px; border-radius: 5px; font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 18M15 3l-3 18"/></svg>
+    </div>
+    <h1>Jewellery Manager</h1>
+    <p class="tag">Jewellery dukaan ke liye GST billing, stock aur hisaab — bina internet ke bhi chalta hai.</p>
+  </header>
+
+  <section class="card download">
+    <a class="btn" id="dl" href="https://github.com/BhoiHemant/jewellery-manager-releases/releases/latest/download/JewelleryManager-Setup.exe">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+      Download
+    </a>
+    <p class="meta">Latest version: <strong id="ver">…</strong><span id="date"></span></p>
+  </section>
+
+  <section class="card">
+    <h2>Zaroorat</h2>
+    <ul class="req">
+      <li>Windows 10 ya Windows 11 (64-bit)</li>
+      <li>Internet sirf licence activate aur update ke liye</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Install kaise karein</h2>
+    <ol>
+      <li>Upar <strong>Download</strong> button dabayein. File ka naam <code>JewelleryManager-Setup.exe</code> hai.</li>
+      <li>Download poora hone par file par double-click karein.</li>
+      <li>Windows ka blue warning aaye to neeche wala step dekhein.</li>
+      <li>Installer me <strong>Next</strong> dabate jaayein, phir <strong>Install</strong>, phir <strong>Finish</strong>.</li>
+      <li>Desktop par <strong>Jewellery Manager</strong> icon se app kholein aur dukaan ki details bharein.</li>
+      <li>Licence screen par jo key humne di hai wo daalein aur <strong>Activate</strong> dabayein.</li>
+    </ol>
+  </section>
+
+  <section class="card warn">
+    <h2>Windows warning aaye to (normal hai)</h2>
+    <p style="margin:0">Blue screen par <em>"Windows protected your PC"</em> likha aaye to ghabraayein nahi:</p>
+    <div class="steps-mini" aria-label="Steps">
+      <span class="pill">More info</span><span class="arrow">→</span><span class="pill">Run anyway</span>
+    </div>
+    <ol>
+      <li><strong>More info</strong> par click karein.</li>
+      <li>Neeche <strong>Run anyway</strong> button aayega, us par click karein.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Update</h2>
+    <p style="margin:0">App khud naya version check karta hai. Popup aaye to <strong>Update now</strong> ya <strong>Later</strong> chunein. Aapka data (bills, stock, customers) update me surakshit rehta hai.</p>
+  </section>
+
+  <footer>
+    <a href="https://github.com/BhoiHemant/jewellery-manager-releases/releases">Purane versions</a>
+  </footer>
+</main>
+<script>
+  // Latest version from the public GitHub API (no token needed). The Download button works even if this fails.
+  fetch('https://api.github.com/repos/BhoiHemant/jewellery-manager-releases/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json() })
+    .then(function (rel) {
+      document.getElementById('ver').textContent = String(rel.tag_name || '').replace(/^v/, '') || '—'
+      if (rel.published_at) {
+        var d = new Date(rel.published_at)
+        document.getElementById('date').textContent = ' · ' + d.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })
+      }
+    })
+    .catch(function () { document.getElementById('ver').textContent = 'latest' })
+</script>
+</body>
+</html>
